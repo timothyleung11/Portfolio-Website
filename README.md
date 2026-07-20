@@ -1,0 +1,1 @@
+Going for a stationary aesthetic, with lined paper, pencil, colored crayons, stickers, and such
