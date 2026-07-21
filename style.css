@@ -10,6 +10,7 @@
     --h1-font-size: min(2.5rem, 4vw); /* 40px */
     --content-padding-top: min(4.5rem, 7vw); /* 72px */
     --content-padding-gen: min(1rem, 1.5vw); /* 16px */
+    --profile-img-height: min(10rem, 15vw); /* 160px */
 }
 
 * {
@@ -99,6 +100,22 @@ body {
     overflow-y: auto; /* breaks the illusion but oh well */
 }
 
+.intro {
+    display: flex;
+    justify-content: center;
+}
+
+.intro > .bio{
+    width: calc(100% / 2);
+}
+
+.intro > .profile {
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
     font-size: var(--h1-font-size);
     line-height: calc(var(--line-height) * 2);
@@ -108,6 +125,37 @@ p {
     font-weight: 400;
 }
 
-#profile {
-    height: 300px;
+.profile img {
+    height: var(--profile-img-height);
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.items > .item {
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.item > img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.showcase > h2 {
+    text-align: center;
+    padding: var(--line-height);
+}
+
+@media (max-width: 852px) {
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .items > .item {
+        width: 100%;
+    }
 }
