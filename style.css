@@ -1,16 +1,19 @@
 :root {
-    --primary-bg-color: #f5f5f5;
-    --line-height: min(28px, 4vw); /* 28px */
-    --page-width: min(53.25rem, 90vw); /* 852px */
-    --hor-line-offset: min(7.249rem, 12.5vw); /* 116px */
-    --ver-line-offset: min(8.499rem, 14.5vw); /* 136px */
-    --punchhole-diameter: min(2rem, 3.5vw); /* 40px */
-    --punchhole-offset: min(1.5rem, 2.5vw); /* 30px */
-    --gen-font-size: min(1.2rem, 2vw); /* 19.2px */
-    --h1-font-size: min(2.5rem, 4vw); /* 40px */
-    --content-padding-top: min(4.5rem, 7vw); /* 72px */
-    --content-padding-gen: min(1rem, 1.5vw); /* 16px */
-    --profile-img-height: min(10rem, 15vw); /* 160px */
+    --primary-bg-color: #C3CC9B;
+    --paper-color: white;
+    --pencil-color: #4B4B4D;
+    
+    --line-height: 4vw;
+    --page-width: 90vw;
+    --hor-line-offset: 12.5vw;
+    --ver-line-offset: 14.5vw;
+    --punchhole-diameter: 3.5vw;
+    --punchhole-offset: 2.5vw;
+    --p-font-size: 2vw;
+    --h1-font-size: 4vw;
+    --content-padding-top: 6vw;
+    --content-padding-gen: 1.5vw;
+    --profile-img-height: 20vw;
 }
 
 * {
@@ -32,7 +35,7 @@ body {
     width: var(--page-width);
     height: auto;
     aspect-ratio: 852 / 1104;
-    background-color: white;
+    background-color: var(--paper-color);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     overflow: hidden;
@@ -94,9 +97,9 @@ body {
     padding: var(--content-padding-top) var(--content-padding-gen) var(--content-padding-gen) calc(var(--ver-line-offset) + var(--content-padding-gen));
     margin-bottom: 0;
     height: 100%;
-    font-size: var(--gen-font-size);
+    font-size: var(--p-font-size);
     line-height: var(--line-height);
-    color: #1f2937;
+    color: var(--pencil-color);
     overflow-y: auto; /* breaks the illusion but oh well */
 }
 
