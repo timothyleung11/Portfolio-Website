@@ -1,3 +1,113 @@
+:root {
+    --primary-bg-color: #f5f5f5;
+    --line-height: min(28px, 4vw); /* 28px */
+    --page-width: min(53.25rem, 90vw); /* 852px */
+    --hor-line-offset: min(7.249rem, 12.5vw); /* 116px */
+    --ver-line-offset: min(8.499rem, 14.5vw); /* 136px */
+    --punchhole-diameter: min(2rem, 3.5vw); /* 40px */
+    --punchhole-offset: min(1.5rem, 2.5vw); /* 30px */
+    --gen-font-size: min(1.2rem, 2vw); /* 19.2px */
+    --h1-font-size: min(2.5rem, 4vw); /* 40px */
+    --content-padding-top: min(4.5rem, 7vw); /* 72px */
+    --content-padding-gen: min(1rem, 1.5vw); /* 16px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, var(--line-height));
+    grid-auto-rows: var(--line-height);
+    font-family: 'Caveat', cursive;
+}
+
+.a4-page {
+    position: relative;
+    width: var(--page-width);
+    height: auto;
+    aspect-ratio: 852 / 1104;
+    background-color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* light red vertical lines */
+.a4-page::before {
+    content: '';
+    position: absolute;
+    left: var(--ver-line-offset);
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #f7c0c0;
+    z-index: 0;
+}
+
+/* light blue horizontal lines */
+.lines {
+    position: absolute;
+    top: var(--hor-line-offset);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent calc(var(--line-height) - 1px),
+        #a4d3dc calc(var(--line-height) - 1px),
+        #a4d3dc var(--line-height)
+    );
+    pointer-events: none;
+}
+
+.punchholes {
+    position: absolute;
+    left: var(--punchhole-offset);
+    width: var(--punchhole-diameter);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--primary-bg-color);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.hole1 {
+    top: 8.695%;
+}
+.hole2 {
+    top: 47.826%;
+}
+.hole3 {
+    bottom: 10.144%;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    padding: var(--content-padding-top) var(--content-padding-gen) var(--content-padding-gen) calc(var(--ver-line-offset) + var(--content-padding-gen));
+    margin-bottom: 0;
+    height: 100%;
+    font-size: var(--gen-font-size);
+    line-height: var(--line-height);
+    color: #1f2937;
+    overflow-y: auto; /* breaks the illusion but oh well */
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    line-height: calc(var(--line-height) * 2);
+}
+
+p {
+    font-weight: 400;
+}
+
 #profile {
     height: 300px;
 }
