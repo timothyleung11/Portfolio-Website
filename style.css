@@ -204,4 +204,11 @@ nav {
     .items > .item {
         width: 100%;
     }
+    .listings section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .listings img, .listings div {
+        width: 100%;
+    }
 }
