@@ -145,12 +145,55 @@ p {
 
 .item > img {
     width: 100%;
-    max-width: 200px;
+    padding: 1vw;
 }
 
 .showcase > h2 {
     text-align: center;
     padding: var(--line-height);
+}
+
+a:hover, .showcase:hover {
+	background-color: #FBF71982;
+}
+
+a:link, a:visited, a:link:active, a:visited:active {
+	color: var(--pencil-color);
+}
+
+nav {
+    position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: var(--p-font-size);
+	padding-left: 16vw;
+	padding-right: 2vw;
+    z-index: 4;
+}
+
+.top-nav {
+	padding-top: 2vw;
+}
+
+.bottom-nav {
+    bottom: var(--line-height);
+}
+
+.listings {
+	display: flex;
+	flex-direction: column;
+}
+
+.listings section {
+	height: calc(100% / 3);
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.listings img, .listings div {
+	max-width: 45%;
+	padding: 0 0.5vw var(--line-height) 0.5vw;
 }
 
 @media (max-width: 852px) {
