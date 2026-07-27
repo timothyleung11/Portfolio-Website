@@ -1,7 +1,9 @@
-Going for a stationary aesthetic, with lined paper, pencil, colored crayons, stickers, and such
+# Stationary-styled Personal Website
+An engineering portfolio that bring the analog vibe of pen and paper back online!
+[website screenshot](website.png)
+Live on GitHub Pages: https://timothyleung11.github.io/Portfolio-Website/ 
 
-To Do:
-- Make projects and experiences clickable
-- design pages for showcase pieces
-- populate site
-- make the intro section a q card style
+Features:
+- Lined paper background
+- CSS flexbox styling
+- Multi-page
